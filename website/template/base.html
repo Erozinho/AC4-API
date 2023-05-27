@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block tittle %}AC3 - API{% endblock %}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <style>
+        .site{
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .site-content{
+            flex-grow: 1;
+        }
+
+        .ca{
+            font-family: 'Montserrat', sans-serif;
+            background-color: #191b1c;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+        }
+
+        .ca .LOGO{
+            color: white;
+            float: left;
+            display: block;
+            padding: 14px 16px;
+        }
+
+        .ca a{
+            color: white;
+            float: right;
+            display: block;
+            padding: 14px 16px;
+        }
+
+        .ca a:hover{
+            transition: 0.5s;
+            background-color: antiquewhite;
+            color:black
+        }
+
+        .pe{
+            font-family: "Arial", sans-serif;
+            background-color: #191b1c;
+        }
+
+        .pe .logo{
+            color: white;
+            float: left;
+            display: block;
+            padding: 14px 16px;
+        }
+
+        .pe a{
+            color: white;
+            float: right;
+            display: block;
+            padding: 14px 16px;
+        }
+
+    </style>
+</head>
+<body class="site">
+    <nav class="ca">
+        <div class="LOGO">AC3</div>
+    </nav><br>
+
+    <div class="site-content">
+    {% block conteudo %}
+    {% endblock %}
+    </div>
+
+    <footer class="pe">
+        <div class="logo">AC3</div>
+        <a>ACABA AQUI</a>
+    </footer>
+</body>
+
+</html>
